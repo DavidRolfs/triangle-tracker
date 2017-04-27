@@ -5,21 +5,23 @@ $(document).ready(function(){
     var side2 = parseInt($("#side2").val());
     var side3 = parseInt($("#side3").val());
 
+    var result;
 
     if(!side1 || !side2 || !side3){
-      alert("enter numbers!!")
+      alert("enter numbers!!");
     } else{
         if(side1+side2 <= side3 || side2+side3 <= side1 || side1+side3 <= side2){
-          $("#triangleType").text("not a triangle");
+          result = ("not a triangle");
         } else{
             if(side1 === side2 && side1 === side3){
-              $("#triangleType").text("Equilateral")
+              result = ("Equilateral");
             } else if(side1===side2 || side1===side3 || side2===side3){
-              $("#triangleType").text("Isosceles");
+              result = ("Isosceles");
             } else if(side1 !==side2 && side1 !== side3 && side2 !== side3){
-              $("#triangleType").text("Scalene")
+              result = ("Scalene");
             }
           }
         }
+        $("#triangleType").text(result);
   });
 })
