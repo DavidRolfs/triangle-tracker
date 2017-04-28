@@ -8,6 +8,9 @@
 
 The webpage has three form input where the user will enter the length of each side of a triangle. When the submit button is hit the three inputted numbers are run through a function. The function uses if/else statements to determine if the three sides form a equilateral, isosceles, or scalene triangle. The triangle type is then returned on the webpage below the form.
 
+## Gh-pages
+https://davidrolfs.github.io/triangle-tracker/
+
 ## Setup/Installation Requirements
 
 * Go to Github repository page https://github.com/DavidRolfs/triangle-tracker
@@ -26,11 +29,11 @@ For questions and support email me at Davidrolfs15@gmail.com
 
 ## Technologies Used
 
-Atom
-html
-javaScript
-jQuery
-css
+Atom,
+html,
+javaScript,
+jQuery,
+css,
 bootstrap
 
 ### License
