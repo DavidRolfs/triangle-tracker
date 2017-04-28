@@ -1,3 +1,24 @@
+// back-end
+var compare = function(s1, s2, s3){
+  if(!s1 || !s2 || !s3){
+    alert("enter numbers!!");
+  } else{
+      if(s1+s2 <= s3 || s2+s3 <= s1 || s1+s3 <= s2){
+        return ("not a triangle");
+      } else{
+          if(s1 === s2 && s1 === s3){
+            return ("Equilateral");
+          } else if(s1===s2 || s1===s3 || s2===s3){
+            return ("Isosceles");
+          } else if(s1 !==s2 && s1 !== s3 && s2 !== s3){
+            return ("Scalene");
+          }
+      }
+    }
+}
+
+
+//front-end
 $(document).ready(function(){
   $("form#triangle").submit(function(event){
     event.preventDefault()
@@ -5,23 +26,6 @@ $(document).ready(function(){
     var side2 = parseInt($("#side2").val());
     var side3 = parseInt($("#side3").val());
 
-    var result;
-
-    if(!side1 || !side2 || !side3){
-      alert("enter numbers!!");
-    } else{
-        if(side1+side2 <= side3 || side2+side3 <= side1 || side1+side3 <= side2){
-          result = ("not a triangle");
-        } else{
-            if(side1 === side2 && side1 === side3){
-              result = ("Equilateral");
-            } else if(side1===side2 || side1===side3 || side2===side3){
-              result = ("Isosceles");
-            } else if(side1 !==side2 && side1 !== side3 && side2 !== side3){
-              result = ("Scalene");
-            }
-          }
-        }
-        $("#triangleType").text(result);
+    $("#triangleType").text(compare(side1, side2, side3));
   });
 })
